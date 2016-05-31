@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0-alpha2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="bf5aa3b026d5b5fd9f4ab5e8cf13499b9e016dfb">
+        <dex dex="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/pre-dexed/debug/classes-3574418a0e197941a88deb96b382b25e9c65b561.jar" />
+    </item>
+    <item
+        jar="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="32ab8bede8cd600f25a5bb3fe15068c81c8910dc">
+        <dex dex="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/pre-dexed/debug/classes-25725aff135956938113999e63439f71bcc1c78e.jar" />
+    </item>
+    <item
+        jar="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0-alpha2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="df7f6513d6e2aaa302bbac654807c6129b517090">
+        <dex dex="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/pre-dexed/debug/classes-8199aefecd8b0a5a8c68b2a77fef5bcdde67cb1c.jar" />
+    </item>
+    <item
+        jar="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0-alpha2/jars/libs/internal_impl-24.0.0-alpha2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e460bc069dfd21d22770cf2a2370c9021b9c98a2">
+        <dex dex="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0-alpha2-af9a65a21fa085686255cda3c3bbd4ee65bfdbaf.jar" />
+    </item>
+    <item
+        jar="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0-alpha2/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="661a632c3b434991d6364690cbe0f786371101cc">
+        <dex dex="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/pre-dexed/debug/classes-05a155cd480ad3242ac776ba4d14fca0d639fd34.jar" />
+    </item>
+    <item
+        jar="/Users/xinran/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/24.0.0-alpha2/support-annotations-24.0.0-alpha2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8071e1e6cd07e9253720313d6c14286a7ee424e0">
+        <dex dex="/Users/xinran/mygithub/TestServiceImgCompress/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0-alpha2-1464b9b097746c3f9e056a61e451231e09d3930e.jar" />
+    </item>
+
+</items>
