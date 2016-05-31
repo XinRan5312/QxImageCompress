@@ -1,0 +1,2 @@
+# QxImageCompress
+对图片压缩处理 一种是利用Service多线程压缩，另一种是利用IntentService压缩，两者都需要要Broadcast的配合或者EnventBus配合
