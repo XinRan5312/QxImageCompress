@@ -20,6 +20,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import rx.Observable;
+import rx.Subscriber;
+
 /**
  * Created by qixinh on 16/5/31.
  */
@@ -72,7 +75,7 @@ public class QxPhoneImgCompress {
 
     /**
      * Can't compress a recycled bitmap
-     *
+     *尽量在子线程中进行此操作
      * @param srcImageUri 原始图片的uri路径
      * @param outWidth    期望的输出图片的宽度
      * @param outHeight   期望的输出图片的高度
@@ -115,6 +118,7 @@ public class QxPhoneImgCompress {
                 actualOutHeight = maxHeight;
             }
         }
+        //保证是等比例缩小的前提下计算options.inSampleSize
         options.inSampleSize = computSampleSize(options, actualOutWidth, actualOutHeight);
         options.inJustDecodeBounds = false;
         Bitmap scaledBitmap = null;
@@ -305,6 +309,31 @@ public class QxPhoneImgCompress {
         void onCompressStart();
 
         void onCompressEnd(CompressResult imageOutPath);
+    }
+
+    public Observable<CompressResult> compressImgResultObservable(final String srcImageUri, final int outWidth, final int outHeight, final int maxFileSize) {
+        final Observable.OnSubscribe<CompressResult> subscribe = new Observable.OnSubscribe<CompressResult>() {
+            @Override
+            public void call(Subscriber<? super CompressResult> subscriber) {
+                subscriber.onStart();
+                CompressResult compressResult = new CompressResult();
+                String outPutPath = null;
+                try {
+                    outPutPath = compressImage(srcImageUri, outWidth, outHeight, maxFileSize);
+                } catch (Exception e) {
+                    subscriber.onError(new Throwable(e));
+                }
+                compressResult.setSrcPath(srcImageUri);
+                compressResult.setOutPath(outPutPath);
+                if (outPutPath == null) {
+                    compressResult.setStatus(CompressResult.RESULT_ERROR);
+                }
+                subscriber.onNext(compressResult);
+                subscriber.onCompleted();
+
+            }
+        };
+        return Observable.create(subscribe);
     }
 
     private class CompressTask extends AsyncTask<String, Void, CompressResult> {
